@@ -8,6 +8,8 @@ import (
 func main() {
 	e := echo.New()
 
+	e.GET("/ping",pingHandler)
+
 	e.GET("/list",getListTodoHandler)
 	e.POST("/add",addTodoHandler)
 
@@ -22,5 +24,9 @@ func getListTodoHandler(c echo.Context) error{
 }
 
 func addTodoHandler(c echo.Context) error{
+	return nil
+}
+func pingHandler(c echo.Context) error{
+	c.JSON(200,"Pong from simple-cd!")
 	return nil
 }
