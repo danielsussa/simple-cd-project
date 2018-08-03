@@ -1,0 +1,15 @@
+language: go
+
+go:
+- 1.9
+
+node_js:
+- 7.2.0
+
+go_import_path: github.com/simple-cd-project
+
+services:
+- docker
+
+before_script:
+  - make build
