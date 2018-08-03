@@ -15,7 +15,7 @@ func main() {
 
 	// Static file
 	sts := e.Group("")
-	sts.Static("/", "/web/dist")
+	sts.Static("/", "web/dist")
 	e.Logger.Fatal(e.Start(":8080"))
 }
 
