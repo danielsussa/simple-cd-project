@@ -1,0 +1,4 @@
+.idea/
+server/dist/
+web/dist/
+web/node_modules

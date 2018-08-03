@@ -8,6 +8,7 @@ RUN go get
 RUN go build -o /bin/server .
 
 ## INSTALL WEB
+RUN npm i npm@latest -g
 ADD web/ /go/src/cd-project/web/
 RUN cd web && npm install && npm run build
 RUN mkdir /bin/web && cp -R web/dist/ /bin/web/dist
