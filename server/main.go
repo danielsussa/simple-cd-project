@@ -1,36 +1,36 @@
 package main
 
 import (
+	"fmt"
 
 	"github.com/labstack/echo"
 	"golang.org/x/net/websocket"
-	"fmt"
 )
 
 func main() {
 	e := echo.New()
 
-	e.GET("/ping",pingHandler)
+	e.GET("/ping", pingHandler)
 
-	e.GET("/list",getListTodoHandler)
-	e.POST("/add",addTodoHandler)
+	e.GET("/list", getListTodoHandler)
+	e.POST("/add", addTodoHandler)
 	e.GET("/", hello)
 
 	// Static file
 	sts := e.Group("")
-	sts.Static("/", "server/dist")
+	sts.Static("/", "../web/dist")
 	e.Logger.Fatal(e.Start(":8080"))
 }
 
-func getListTodoHandler(c echo.Context) error{
+func getListTodoHandler(c echo.Context) error {
 	return nil
 }
 
-func addTodoHandler(c echo.Context) error{
+func addTodoHandler(c echo.Context) error {
 	return nil
 }
-func pingHandler(c echo.Context) error{
-	c.JSON(200,"Pong from simple-cd!")
+func pingHandler(c echo.Context) error {
+	c.JSON(200, "Pong from simple-cd")
 	return nil
 }
 

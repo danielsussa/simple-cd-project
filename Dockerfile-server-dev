@@ -1,0 +1,8 @@
+FROM avcosystems/golang-node
+
+## INSTALL SERVER
+RUN mkdir /go/src/cd-project
+RUN go get github.com/githubnemo/CompileDaemon
+WORKDIR /go/src/cd-project
+ENV PATH /go/src/cd-project/scripts:$PATH
+CMD ["run-server.sh"]
