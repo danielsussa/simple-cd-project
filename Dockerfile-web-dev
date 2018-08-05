@@ -1,5 +1,0 @@
-FROM avcosystems/golang-node
-
-## INSTALL WEB
-ENV PATH /go/src/cd-project/scripts:$PATH
-CMD ["run-web.sh"]
