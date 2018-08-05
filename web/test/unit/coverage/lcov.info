@@ -1,5 +1,5 @@
 TN:
-SF:/home/dkanczuk/go/src/github.com/danielsussa/simple-cd-project/web/src/App.vue
+SF:/web/src/App.vue
 FNF:0
 FNH:0
 DA:9,0
@@ -9,7 +9,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/dkanczuk/go/src/github.com/danielsussa/simple-cd-project/web/src/components/HelloWorld.vue
+SF:/web/src/components/HelloWorld.vue
 FN:11,data
 FNF:1
 FNH:0

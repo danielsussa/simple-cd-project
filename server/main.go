@@ -22,8 +22,20 @@ func main() {
 	e.Logger.Fatal(e.Start(":8080"))
 }
 
+type todo struct {
+	Title       string
+	Description string
+}
+
+func todoList() []todo {
+	return []todo{
+		{Title: "Do auto build", Description: "Just create a simple Dockerfile"},
+		{Title: "Add tests", Description: "Run front and backend tests"},
+	}
+}
+
 func getListTodoHandler(c echo.Context) error {
-	return nil
+	return c.JSON(200, todoList())
 }
 
 func addTodoHandler(c echo.Context) error {
