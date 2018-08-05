@@ -23,8 +23,8 @@ func main() {
 }
 
 type todo struct {
-	Title       string
-	Description string
+	Title       string `json:"title"`
+	Description string `json:"description"`
 }
 
 func todoList() []todo {
