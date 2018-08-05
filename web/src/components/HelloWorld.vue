@@ -10,7 +10,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Simple project design with VUE.JS and GOLANG...'
+      msg: 'Simple project design with VUE.JS and GOLANG!'
     }
   }
 }
